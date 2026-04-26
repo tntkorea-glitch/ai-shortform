@@ -48,3 +48,6 @@ next-env.d.ts
 secrets/
 credentials*.json
 .claude-memory/
+
+.vercel
+.env*.local

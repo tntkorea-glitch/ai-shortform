@@ -1,0 +1,236 @@
+/**
+ * Wings/AI-Shortform Design System Tokens
+ *
+ * Canonical source: D:/dev/ai-shortform/public/design-system/tokens.css
+ * Mirrored to:
+ *   - D:/dev/yutica/public/design-system/tokens.css
+ *   - D:/dev/tnt-mall/public/design-system/tokens.css (Phase 2)
+ *
+ * 변경 절차:
+ *   1) 이 파일 (ai-shortform) 만 수정 — 진실의 단일 출처
+ *   2) yutica/tnt-mall 사본은 sync 스크립트 또는 수동 복사
+ *   3) DESIGN.md 의 "변경 이력" 에 기록
+ *
+ * 분석 기반: 윙스AI 38장 캡쳐 (2026-04-27 02:52~03:03)
+ *   - 30장 쇼핑 / 7장 일반 / 1장 API 키 정보
+ */
+
+:root {
+  /* ─── Primary 색상 ──────────────────────────────────────── */
+  --ws-pink: #ff1493;        /* Primary CTA */
+  --ws-purple: #8b0ab8;      /* Secondary */
+  --ws-blue: #0099ff;        /* Accent (정보) */
+  --ws-orange: #ff8c00;      /* CTA 강조 */
+
+  /* ─── 색상 시리즈 (Hover/Border용) ──────────────────────── */
+  --ws-pink-50:  #fff0f5;
+  --ws-pink-100: #ffd7e8;
+  --ws-pink-300: #ff7eb6;
+  --ws-pink-500: #ff1493;
+  --ws-pink-700: #c70066;
+  --ws-pink-900: #6f0035;
+
+  --ws-purple-50:  #f5e6ff;
+  --ws-purple-300: #b766d6;
+  --ws-purple-500: #8b0ab8;
+  --ws-purple-700: #5b006e;
+
+  --ws-blue-50:  #e0f0ff;
+  --ws-blue-300: #66b8ff;
+  --ws-blue-500: #0099ff;
+  --ws-blue-700: #0066cc;
+
+  --ws-mint-50:  #e8f8f5;
+  --ws-cream-50: #fffacd;
+
+  /* ─── 텍스트 ──────────────────────────────────────────── */
+  --ws-text-primary:   #0f172a;
+  --ws-text-secondary: #475569;
+  --ws-text-muted:     #94a3b8;
+  --ws-text-inverse:   #ffffff;
+
+  /* ─── 배경 ──────────────────────────────────────────── */
+  --ws-bg-base:    #ffffff;
+  --ws-bg-soft:    #fafafa;
+  --ws-bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* ─── 그라디언트 (윙스AI 핵심 시그니처) ──────────────── */
+  --ws-gradient-primary:      linear-gradient(135deg, #ff1493 0%, #0099ff 100%);
+  --ws-gradient-pink-purple:  linear-gradient(135deg, #ff1493 0%, #8b0ab8 100%);
+  --ws-gradient-soft:         linear-gradient(180deg, #fff0f5 0%, #ffffff 100%);
+  --ws-gradient-warm:         linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+
+  /* ─── 타이포 ──────────────────────────────────────────── */
+  --ws-font-family:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  --ws-font-size-xs:   11px;
+  --ws-font-size-sm:   13px;
+  --ws-font-size-base: 14px;
+  --ws-font-size-lg:   16px;
+  --ws-font-size-xl:   20px;
+  --ws-font-size-2xl:  28px;
+  --ws-font-size-3xl:  36px;
+
+  --ws-font-weight-regular:   400;
+  --ws-font-weight-medium:    500;
+  --ws-font-weight-bold:      700;
+  --ws-font-weight-extrabold: 800;
+
+  /* ─── 스페이싱 ──────────────────────────────────────── */
+  --ws-space-xs:  4px;
+  --ws-space-sm:  8px;
+  --ws-space-md:  12px;
+  --ws-space-lg:  16px;
+  --ws-space-xl:  24px;
+  --ws-space-2xl: 32px;
+  --ws-space-3xl: 48px;
+
+  /* ─── 라운드 ──────────────────────────────────────── */
+  --ws-radius-sm:   6px;
+  --ws-radius-md:   10px;
+  --ws-radius-lg:   16px;
+  --ws-radius-xl:   24px;
+  --ws-radius-full: 9999px;
+
+  /* ─── 그림자 ──────────────────────────────────────── */
+  --ws-shadow-sm:        0 1px 2px rgba(0, 0, 0, 0.05);
+  --ws-shadow-md:        0 4px 12px rgba(0, 0, 0, 0.08);
+  --ws-shadow-lg:        0 12px 24px rgba(0, 0, 0, 0.12);
+  --ws-shadow-glow-pink: 0 0 0 3px rgba(255, 20, 147, 0.15);
+
+  /* ─── 트랜지션 ──────────────────────────────────────── */
+  --ws-transition-fast: 0.15s ease;
+  --ws-transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ────────────────────────────────────────────────────── */
+/* 컴포넌트 단축 클래스 — vanilla HTML/Next.js 공통 사용  */
+/* ────────────────────────────────────────────────────── */
+
+.ws-btn-primary {
+  background: var(--ws-gradient-primary);
+  color: var(--ws-text-inverse);
+  border: none;
+  border-radius: var(--ws-radius-xl);
+  padding: var(--ws-space-md) var(--ws-space-2xl);
+  font-family: var(--ws-font-family);
+  font-weight: var(--ws-font-weight-bold);
+  font-size: var(--ws-font-size-base);
+  cursor: pointer;
+  transition: var(--ws-transition-base);
+  box-shadow: var(--ws-shadow-md);
+}
+.ws-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: var(--ws-shadow-lg);
+}
+.ws-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ws-btn-secondary {
+  background: transparent;
+  color: var(--ws-pink);
+  border: 2px solid var(--ws-pink);
+  border-radius: var(--ws-radius-xl);
+  padding: var(--ws-space-md) var(--ws-space-2xl);
+  font-family: var(--ws-font-family);
+  font-weight: var(--ws-font-weight-bold);
+  cursor: pointer;
+  transition: var(--ws-transition-base);
+}
+.ws-btn-secondary:hover {
+  background: var(--ws-pink-50);
+}
+
+.ws-card {
+  background: var(--ws-bg-base);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--ws-radius-lg);
+  padding: var(--ws-space-xl);
+  box-shadow: var(--ws-shadow-md);
+  transition: var(--ws-transition-base);
+}
+.ws-card:hover {
+  box-shadow: var(--ws-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.ws-modal {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: var(--ws-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--ws-shadow-lg);
+  backdrop-filter: blur(8px);
+}
+
+.ws-modal-header {
+  background: var(--ws-gradient-primary);
+  color: var(--ws-text-inverse);
+  padding: var(--ws-space-lg) var(--ws-space-xl);
+  border-radius: var(--ws-radius-lg) var(--ws-radius-lg) 0 0;
+  font-weight: var(--ws-font-weight-extrabold);
+  font-size: var(--ws-font-size-lg);
+}
+
+.ws-input {
+  width: 100%;
+  padding: var(--ws-space-md) var(--ws-space-lg);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--ws-radius-md);
+  font-family: var(--ws-font-family);
+  font-size: var(--ws-font-size-base);
+  background: var(--ws-bg-base);
+  color: var(--ws-text-primary);
+  transition: var(--ws-transition-fast);
+}
+.ws-input:focus {
+  outline: none;
+  border-color: var(--ws-pink);
+  box-shadow: var(--ws-shadow-glow-pink);
+}
+
+.ws-tab-active {
+  color: var(--ws-pink);
+  border-bottom: 2px solid var(--ws-pink);
+  font-weight: var(--ws-font-weight-bold);
+}
+
+.ws-tab-inactive {
+  color: var(--ws-text-muted);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--ws-transition-fast);
+}
+.ws-tab-inactive:hover {
+  color: var(--ws-text-secondary);
+}
+
+/* 카테고리 아이콘 격자 (윙스AI 일반 숏폼 핵심 패턴) */
+.ws-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--ws-space-lg);
+}
+.ws-category-item {
+  background: var(--ws-bg-base);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--ws-radius-lg);
+  padding: var(--ws-space-xl);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--ws-transition-base);
+}
+.ws-category-item:hover {
+  border-color: var(--ws-pink);
+  background: var(--ws-pink-50);
+  transform: translateY(-2px);
+}
+.ws-category-item-active {
+  border-color: var(--ws-pink) !important;
+  background: var(--ws-pink-50);
+  box-shadow: var(--ws-shadow-glow-pink);
+}
