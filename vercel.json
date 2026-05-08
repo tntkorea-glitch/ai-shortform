@@ -1,9 +1,10 @@
-{
-  "git": {
-    "deploymentEnabled": {
-      "master": false
-    }
-  },
-  "buildCommand": "next build",
-  "installCommand": "npm install"
+﻿{
+    "ignoreCommand":  "git log -1 --pretty=%s | grep -q \u0027auto-commit from Claude Code\u0027",
+    "buildCommand":  "next build",
+    "git":  {
+                "deploymentEnabled":  {
+                                          "master":  false
+                                      }
+            },
+    "installCommand":  "npm install"
 }
